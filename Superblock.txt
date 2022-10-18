@@ -1,0 +1,4 @@
+Superblock: 12 bytes where:
+	-Size if block (4 bytes): 2048
+	-Size of Fat(4 bytes) : 4096
+	-Number of Files in root(4 bytes) : 16

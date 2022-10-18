@@ -1,0 +1,4 @@
+/source: first block: 3, type: 1
+	/source/nfs.c: first block: 220, type: 0
+/w13.jpg: first block: 209, type: 0
+/Akh12.txt: first block: 149, type: 0
