@@ -59,7 +59,7 @@ class Superblock(Block):
         info = struct.unpack('lll', info)
         superblock_param = []
         for parm in info:
-            superblock_param.append(int(hex(parm), 16))
+            superblock_param.append(parm)
         return superblock_param
 
     def save_inf(self):
@@ -216,7 +216,7 @@ def show_text_files(files_path: list, files_blocks: list, data: str, system_size
             print(content)
 
 
-def save_file_content(files_path: list, files_attr: list, files_blocks: list, data: str,
+def save_file_content(files_attr: list, files_blocks: list, data: str,
                       system_size: int, block_size: int, fat_table: list, files_names: list, user_input=False):
     """
     Save the file content in binary to file with same name
@@ -233,8 +233,8 @@ def save_file_content(files_path: list, files_attr: list, files_blocks: list, da
     """
     if not user_input:
         user_input = input('Enter full file path in format /..../... : ')
-    if user_input in files_path:
-        position = files_path.index(user_input)
+    if user_input in files_names:
+        position = files_names.index(user_input)
         if files_attr[position] == 1:
             return "It's a folder"
         result = read_file(files_blocks[position], data, system_size, block_size, fat_table)

@@ -215,7 +215,7 @@ def test_save_file():
                  (496, 0), (497, 0), (498, 0), (499, 0), (500, 0), (501, 0), (502, 0), (503, 0), (504, 135), (505, 256),
                  (506, 334), (507, 360), (508, 65), (509, 128), (510, 0), (511, 0)]
     hash_equal = '793bb624b6397026a166940c6ded6e42'
-    main.save_file_content(['/source', '/source/nfs.c', '/w13.jpg', '/Akh12.txt'], [1, 0, 0, 0], [3, 220, 209, 149],
+    main.save_file_content([1, 0, 0, 0], [3, 220, 209, 149],
                            'v12.dat', 4428, 2048, fat_table, ['source', 'nfs.c', 'w13.jpg', 'Akh12.txt'], 'w13.jpg')
     with open('w13.jpg', 'rb') as f:
         file_hash = hashlib.md5(f.read()).hexdigest()
